@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+        <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 
@@ -19,7 +20,8 @@
     <link href="${pageContext.request.contextPath}/css/plugins/iCheck/custom.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/css/animate.min.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/css/style.min.css?v=4.1.0" rel="stylesheet">
-<link href="${pageContext.request.contextPath}/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+	<link href="${pageContext.request.contextPath}/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+	<link href="${pageContext.request.contextPath}/css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
 
 </head>
 
@@ -30,7 +32,7 @@
             <div class="col-sm-12">
                 <div class="ibox ">
                     <div class="ibox-title">
-                        <h5>冷链管理 </h5>
+                        <h5>冷链档案查询</h5>
                         <div class="ibox-tools">
                         </div>
                     </div>
@@ -39,92 +41,34 @@
                         <form role="form" class="form-inline">
                             <div class="form-group">
                                 <label for="exampleInputEmail2" class="sr-only">设备编码</label>
-                                <input type="email" placeholder="请输入用户名" id="exampleInputEmail2" class="form-control">
+                                <input type="text" placeholder="设备编码" id="_name" class="form-control">
                             </div>
                             <div class="form-group">
-                               <label for="exampleInputEmail4" class="sr-only">设备类型</label>
+                              <label for="exampleInputEmail4" class="sr-only">设备类型</label>
 			                                   <select class="form-control " name="account">
 				                                        <option>冷藏车</option>
-				                                        <option>选项 2</option>
-				                                        <option>选项 3</option>
-				                                        <option>选项 4</option>
+				                                        <option>冰库</option>
                                    				 </select>
                             </div>
-                            <button class="btn btn-primary" type="submit">查询</button>
+                            <button class="btn btn-primary" type="button" id='_search'>查询</button>
                         </form>
                     </div>
                     
                     <div class="ibox-content">
-                         <table class="table table-striped table-bordered table-hover dataTables-example">
+                         <table ID='dt_table_view' class="table table-striped table-bordered table-hover dataTables-example">
                             <thead>
                                 <tr>
-                                    <th>设备编号</th>
+									 <th>设备编号</th>
                                     <th>设备类型</th>
                                     <th>设备型号</th>
                                      <th>到货日期</th>
                                       <th>启用日期</th>
-                                     <th>设备状态</th>
-                                       <th>操作</th>
-                                </tr>
+                                      <th>设备状态</th>
+								</tr>
                             </thead>
-                            <tbody>
-                                <tr class="gradeX">
-                                     <th>10023</th>
-                                    <th>冷藏车</th>
-                                    <th>RT-1023</th>
-                                     <th>2014-04-04</th>
-                                       <th>2016-04-04</th>
-                                    <th><span class="label label-info">启用</span></th>
-                                     <th> <a href="#">操作</a> </th>
-                                </tr>
-                                 <tr class="gradeX">
-                                     <th>10024</th>
-                                    <th>冷藏车2</th>
-                                    <th>RT-1025</th>
-                                     <th>2014-04-04</th>
-                                       <th>2016-04-04</th>
-                                    <th><span class="label label-info">启用</span></th>
-                                     <th> <a href="#">操作</a> </th>
-                                </tr>
-                                 <tr class="gradeX">
-                                     <th>100278</th>
-                                    <th>冷藏车2</th>
-                                    <th>RT-1025</th>
-                                     <th>2014-04-04</th>
-                                       <th>2016-04-04</th>
-                                    <th><span class="label label-danger">停用</span></th>
-                                       <th> <a href="#">操作</a> </th>
-                                </tr>
-                                 <tr class="gradeX">
-                                     <th>10026</th>
-                                    <th>冷藏车2</th>
-                                    <th>RT-1025</th>
-                                     <th>2014-04-04</th>
-                                       <th>2016-04-04</th>
-                                    <th><span class="label label-info">启用</span></th>
-                                     <th> <a href="#">操作</a> </th>
-                                </tr>
-                                </tbody>
-                                </table>
-                                <nav>
-  <ul class="pagination" style="float: right;">
-    <li>
-      <a href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
-    <li>
-      <a href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+                       		 <tbody>
+                            </tbody>
+                          </table>
                     </div>
                 </div>
             </div>
@@ -132,17 +76,58 @@
         
         
    </div>
-    <script src="${pageContext.request.contextPath}/js/jquery.min.js?v=2.1.4"></script>
+    <script src="${pageContext.request.contextPath}/js/plugins/dataTables/jquery.js"></script>
     <script src="${pageContext.request.contextPath}/js/bootstrap.min.js?v=3.3.6"></script>
     <script src="${pageContext.request.contextPath}/js/content.min.js?v=1.0.0"></script>
     <script src="${pageContext.request.contextPath}/js/plugins/iCheck/icheck.min.js"></script>
      <script src="${pageContext.request.contextPath}/js/plugins/datapicker/bootstrap-datepicker.js"></script>
     
+    <!-- Data Tables -->
+    <script src="${pageContext.request.contextPath}/js/plugins/dataTables/jquery.dataTables.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/plugins/dataTables/dataTables.bootstrap.min.js"></script>
+    
+    <script src="${pageContext.request.contextPath}/js/common.js?v=1.0.0"></script>
+  
+    <script src="${pageContext.request.contextPath}/js/jquerydatatable.defaults.js"></script>
+  
+  
     <script>
+   	
+   		
         $(document).ready(function(){
-        	$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})
-        	$(".input-group.date").datepicker({minViewMode:1,keyboardNavigation:false,forceParse:false,autoclose:true,todayHighlight:true});
-        
+        	var table=$('#dt_table_view').DataTable( {
+	            "ajax": {
+	                "url": "http://127.0.0.1:8080/ymgl/admin/store/list",
+	                "type": "POST"
+	              },
+				"columns" : [{
+					"data" : "sbbh"
+				}, {
+					"data" : "sblx"
+				},{
+					"data" : "sbxh",
+				},{
+					"data" : "dhrq",
+				},{
+					"data" : "qyrq",
+				},{
+					"data" : "sbzt",
+				}] ,
+        		"initComplete": function () {
+        			var api = this.api();
+        			$("#_search").on("click", function(){
+            		 api.draw();
+        			} );
+        			
+        			
+        		} 
+        	 } ).on('preXhr.dt', function ( e, settings, data ) {
+		        data.name = $("#_name").val();
+		        return true;
+		     } ).on('xhr.dt', function ( e, settings, json, xhr ) {
+		    	 $(".dataTables_processing").hide();	
+		     } )
+			
         });
     </script>
 </body>

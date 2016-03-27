@@ -37,7 +37,7 @@
                             <span><img alt="image" class="img-circle" src="${pageContext.request.contextPath}/img/profile_small.jpg" /></span>
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="clear">
-                               <span class="block m-t-xs"><strong class="font-bold">Beaut-zihan</strong></span>
+                               <span class="block m-t-xs"><strong class="font-bold">王科长</strong></span>
                                 <span class="text-muted text-xs block">超级管理员<b class="caret"></b></span>
                                 </span>
                             </a>
@@ -73,10 +73,7 @@
                             </li>
                             
                             <li>
-                                <a class="J_menuItem" href="index_v2.html">登记温度</a>
-                            </li>
-                            <li>
-                                <a class="J_menuItem" href="index_v3.html">温度检测表查询</a>
+                                <a class="J_menuItem" href="store/record">冷链温度管理</a>
                             </li>
                         </ul>
 
@@ -90,25 +87,19 @@
                         </a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a class="J_menuItem" href="graph_echarts.html">百度ECharts</a>
+                                <a class="J_menuItem" href="graph_echarts.html">疫苗入库</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="graph_flot.html">Flot</a>
+                                <a class="J_menuItem" href="graph_flot.html">疫苗出口</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="graph_morris.html">Morris.js</a>
+                                <a class="J_menuItem" href="graph_morris.html">报废登记</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="graph_rickshaw.html">Rickshaw</a>
+                                <a class="J_menuItem" href="graph_rickshaw.html">库存统计</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="graph_peity.html">Peity</a>
-                            </li>
-                            <li>
-                                <a class="J_menuItem" href="graph_sparkline.html">Sparkline</a>
-                            </li>
-                            <li>
-                                <a class="J_menuItem" href="graph_metrics.html">图表组合</a>
+                                <a class="J_menuItem" href="graph_peity.html">报废统计</a>
                             </li>
                         </ul>
                     </li>
@@ -127,7 +118,7 @@
                     <li>
                         <a href="#"><i class="fa fa-cutlery"></i> <span class="nav-label">系统设置 </span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="form_builder.html">表单构建器</a>
+                            <li><a class="J_menuItem" href="form_builder.html">人员管理</a>
                             </li>
                         </ul>
                     </li>
@@ -160,23 +151,9 @@
                                         </a>
                                         <div class="media-body">
                                             <small class="pull-right">46小时前</small>
-                                            <strong>小四</strong> 这个在日本投降书上签字的军官，建国后一定是个不小的干部吧？
+                                            <strong>王科长</strong> 疫苗新到
                                             <br>
-                                            <small class="text-muted">3天前 2014.11.8</small>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="divider"></li>
-                                <li>
-                                    <div class="dropdown-messages-box">
-                                        <a href="profile.html" class="pull-left">
-                                            <img alt="image" class="img-circle" src="${pageContext.request.contextPath}/img/a4.jpg">
-                                        </a>
-                                        <div class="media-body ">
-                                            <small class="pull-right text-navy">25小时前</small>
-                                            <strong>国民岳父</strong> 如何看待“男子不满自己爱犬被称为狗，刺伤路人”？——这人比犬还凶
-                                            <br>
-                                            <small class="text-muted">昨天</small>
+                                            <small class="text-muted">3天前 2016.11.8</small>
                                         </div>
                                     </div>
                                 </li>
@@ -190,40 +167,6 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-                                <i class="fa fa-bell"></i> <span class="label label-primary">8</span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-alerts">
-                                <li>
-                                    <a href="mailbox.html">
-                                        <div>
-                                            <i class="fa fa-envelope fa-fw"></i> 您有16条未读消息
-                                            <span class="pull-right text-muted small">4分钟前</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="divider"></li>
-                                <li>
-                                    <a href="profile.html">
-                                        <div>
-                                            <i class="fa fa-qq fa-fw"></i> 3条新回复
-                                            <span class="pull-right text-muted small">12分钟钱</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="divider"></li>
-                                <li>
-                                    <div class="text-center link-block">
-                                        <a class="J_menuItem" href="notifications.html">
-                                            <strong>查看所有 </strong>
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        
                     </ul>
                 </nav>
             </div>
@@ -257,7 +200,7 @@
                 <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="index_v1.html?v=4.0" frameborder="0" data-id="index_v1.html" seamless></iframe>
             </div>
             <div class="footer">
-                <div class="pull-right">&copy; 2014-2015 <a href="http://www.zi-han.net/" target="_blank">zihan's blog</a>
+                <div class="pull-right">&copy; 2014-2015 <a href="" target="_blank">263608237@qq.com</a>
                 </div>
             </div>
         </div>
@@ -576,99 +519,6 @@
                 </div>
 
             </div>
-        </div>
-        <!--右侧边栏结束-->
-        <!--mini聊天窗口开始-->
-        <div class="small-chat-box fadeInRight animated">
-
-            <div class="heading" draggable="true">
-                <small class="chat-date pull-right">
-                    2015.9.1
-                </small> 与 Beau-zihan 聊天中
-            </div>
-
-            <div class="content">
-
-                <div class="left">
-                    <div class="author-name">
-                        Beau-zihan <small class="chat-date">
-                        10:02
-                    </small>
-                    </div>
-                    <div class="chat-message active">
-                        你好
-                    </div>
-
-                </div>
-                <div class="right">
-                    <div class="author-name">
-                        游客
-                        <small class="chat-date">
-                            11:24
-                        </small>
-                    </div>
-                    <div class="chat-message">
-                        你好，请问H+有帮助文档吗？
-                    </div>
-                </div>
-                <div class="left">
-                    <div class="author-name">
-                        Beau-zihan
-                        <small class="chat-date">
-                            08:45
-                        </small>
-                    </div>
-                    <div class="chat-message active">
-                        有，购买的H+源码包中有帮助文档，位于docs文件夹下
-                    </div>
-                </div>
-                <div class="right">
-                    <div class="author-name">
-                        游客
-                        <small class="chat-date">
-                            11:24
-                        </small>
-                    </div>
-                    <div class="chat-message">
-                        那除了帮助文档还提供什么样的服务？
-                    </div>
-                </div>
-                <div class="left">
-                    <div class="author-name">
-                        Beau-zihan
-                        <small class="chat-date">
-                            08:45
-                        </small>
-                    </div>
-                    <div class="chat-message active">
-                        1.所有源码(未压缩、带注释版本)；
-                        <br> 2.说明文档；
-                        <br> 3.终身免费升级服务；
-                        <br> 4.必要的技术支持；
-                        <br> 5.付费二次开发服务；
-                        <br> 6.授权许可；
-                        <br> ……
-                        <br>
-                    </div>
-                </div>
-
-
-            </div>
-            <div class="form-chat">
-                <div class="input-group input-group-sm">
-                    <input type="text" class="form-control"> <span class="input-group-btn"> <button
-                        class="btn btn-primary" type="button">发送
-                </button> </span>
-                </div>
-            </div>
-
-        </div>
-        <div id="small-chat">
-            <span class="badge badge-warning pull-right">5</span>
-            <a class="open-small-chat">
-                <i class="fa fa-comments"></i>
-
-            </a>
         </div>
     </div>
     <script src="${pageContext.request.contextPath}/js/jquery.min.js?v=2.1.4"></script>
