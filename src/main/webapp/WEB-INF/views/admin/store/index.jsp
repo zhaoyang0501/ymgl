@@ -93,11 +93,11 @@
   
     <script>
    	
-   		
+        $.common.setContextPath('${pageContext.request.contextPath}');
         $(document).ready(function(){
         	var table=$('#dt_table_view').DataTable( {
 	            "ajax": {
-	                "url": "http://127.0.0.1:8080/ymgl/admin/store/list",
+	                "url": $.common.getContextPath() + "/admin/store/list",
 	                "type": "POST"
 	              },
 				"columns" : [{
